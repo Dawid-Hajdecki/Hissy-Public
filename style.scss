@@ -1,0 +1,498 @@
+/* Global */
+body{
+  margin:0;
+  padding:0;
+  font-family: "Raleway", sans-serif;
+  height: 100vh;
+  width:100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4d1f31;
+  background-repeat: no-repeat;
+  overflow:hidden;
+  font-weight: 300;
+}
+/* Header */
+header{
+  position:absolute;
+  top:0px;
+  width: 100vw;
+}
+.logo{
+  color:black;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-size: 150px;
+  transition: margin 2s;
+  -webkit-transition: margin 2s;
+}
+.logo a{
+  text-decoration: none;
+  color: white;
+  text-shadow: -5px 0 black, 0 5px black, 5px 0 black, 0 -5px black;
+}
+/* Section */
+.all{
+  display: flex;
+  justify-content: center;
+}
+.box:hover .boxText {
+  opacity: 1;
+}
+.box{
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  box-shadow: 0 0 20px 5px #c02641;
+  opacity: 1;
+  transition: all 1s ease;
+  position: relative;
+  background-position: center center;
+  background-size: calc(100% - 90px);
+  background-repeat: no-repeat;
+  background-color: #f2d16d;
+  cursor: pointer;
+  background-blend-mode: darken;
+}
+.box:hover{
+  box-shadow: 0 0 30px 10px #f2d16d;
+  background-color: #d95a41;
+  width:210px;
+}
+.boxDisable{
+  box-shadow: none;
+  background-color: #597c80;
+  cursor: default;
+}
+.boxDisable:hover{
+  box-shadow: none;
+  background-color: #597c80;
+}
+.boxText{
+  font-weight: bold;
+  font-size: 20px;
+  transform: translatey(30px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  bottom: 0;
+  left: 5px;
+  position: absolute;
+  color: white;
+  text-shadow: 0 0 5px rgba(100, 100, 255, 0.6);
+}
+.leftleft{
+  transform: translateX(-60px);
+  background-image: url(https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_user-512.png);
+}
+.left{
+  transform: translateX(-30px);
+  background-image: url(https://cdn3.iconfinder.com/data/icons/wpzoom-developer-icon-set/500/78-512.png);
+}
+.center{
+  background-image: url(https://cdn1.iconfinder.com/data/icons/ios-11-glyphs/30/game_controller-512.png);
+}
+.right{
+  transform: translateX(30px);
+  background-image: url(https://cdn3.iconfinder.com/data/icons/wpzoom-developer-icon-set/500/105-512.png);
+}
+.rightright{
+  transform: translateX(60px);
+  background-image: url(https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/mail-24-512.png);
+}
+
+/* Footer */
+.fText{
+  position: fixed;
+  bottom:0;
+  left:0px;
+  margin: 10px;
+  color:white;
+}
+
+/* Modal */
+.modal{
+  display:none;
+  min-width: 300px;
+  min-height: 60vh;
+  position:fixed;
+  border: 1px solid #fff;
+  box-shadow: 0 0 20px 5px #c02641;
+  border-radius: 10px;
+  background: #c29261;
+  transition: all 1s ease;
+  z-index:1;
+}
+.modal:hover{
+  box-shadow: 0 0 100px 10px #c02641;
+}
+.modalSmall{
+  position: absolute;
+  height: 10vh;
+  width:100%;
+  background-color: #2c1f47;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.modal h1{
+  position: absolute;
+  top: 25%;
+  left: 25px;
+  margin:0px;
+  font-size: 35px;
+  color:#ffccb2;
+}
+.modalCenter{
+  position: absolute;
+  top: 10vh;
+  min-width:inherit;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.modalHeading{
+  bottom: 25%;
+}
+.modalHeading:hover, .modalHeading:focus{
+  font-size:36px;
+  color:grey;
+  cursor: pointer;
+}
+.modal .box{
+  position:relative;
+  top:20%;
+  left:15%;
+  margin:30px;
+  float:left;
+  width:150px;
+  height:100px;
+  background: #4d1f31;
+}
+.modal .boxText{
+  font-size: 17px;
+  opacity:1;
+  transform: translatey(0px);
+  color:white;
+}
+/* Login Modal */
+.modalLogin{
+  width: 30vw;
+  height:60vh;
+}
+.modal span.link {
+  position:absolute;
+  bottom:0;
+  right:0;
+  margin:10px;
+  color:white;
+}
+.modal span.link a{
+  text-decoration: none;
+  color:grey;
+  font-weight:bold;
+}
+.modal span.link a:hover{
+  color:white;
+  cursor:pointer;
+}
+.modalCenterLogin{
+  width:100%;
+  height:40vh;
+}
+/* Register Modal */
+.modalRegister{
+  width: 30vw;
+  height:60vh;
+}
+.modalCenterRegister{
+  width:100%;
+  height:40vh;
+}
+/* Contact Modal */
+.modalContact{
+  width:60vw;
+  min-height:60vh;
+  display:none;
+}
+.modalCenterContact{
+  width:100%;
+  height:50vh;
+}
+.modalContact input[type=email], .modalContact input[type=text]{
+  width: 35%;
+}
+.modalContact textarea{
+  height:250px;
+  width:90%;
+  padding-bottom:100px;
+  resize: vertical;
+}
+.modalContact button{
+  bottom:10px;
+}
+/* Profil Modal */
+.modalProfil{
+  width:30vw;
+  height:470px;
+}
+.modalCenterProfil{
+  width:100%;
+  height:40vh;
+}
+.modalCenter label{
+  display:block;
+  padding:7px;
+  font-weight: bold;
+}
+/* Password Change Modal */
+.modalPassword{
+  width:30vw;
+  height:470px;
+}
+.modalCenterPassword{
+  width:100%;
+  height:50vh;
+}
+/* Abbout Modal */
+.modalAbout{
+  width:60vw;
+  height:60vh;
+}
+.modalCenterAbout{
+  width:100%;
+  height:50vh;
+}
+.modalCenterAbout h2, .modalCenterEduQuiz h2{
+  margin:15px;
+  position: relative;
+  text-align:center;
+  color: white;
+  border-width: 0 0 0px 50px;
+  border-style: solid;
+  border-image: linear-gradient(to right, black, rgba(0, 0, 0, 0)) 1 100%;
+  animation: background 4s ease-out alternate infinite;
+}
+@keyframes background {
+  to {
+    background: #4d1f31;
+  }
+}
+.modalCenterAbout p, .modalCenterEduQuiz p{
+  margin:10px 20px 10px 20px;
+  padding:0px;
+  position: relative;
+}
+/* Education Modal and Quizzes Modal*/
+.modalEduQuiz{
+  width:45vw;
+  height:50vh;
+}
+.modalCenterEduQuiz{
+  width:100%;
+  height:50vh;
+}
+.modalEduQuiz .box{
+  position: relative;
+  left:10px;
+}
+/* Alert */
+.alert{
+  min-height: 30px;
+  width: 50vw;
+  background: #e6e0da;
+  position:fixed;
+  top:10px;
+  z-index: 99;
+  border-radius: 25px;
+  box-shadow: 2px 2px 10px 1px #e6e0da;
+  transition: all 1s ease;
+  display: none;
+}
+.alertS{
+  background: #e6e0da;
+  box-shadow: 2px 2px 10px 1px black;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+  border-bottom: 2px solid white;
+}
+.alertW{
+  background: #c02641;
+  box-shadow: 2px 2px 10px 1px black;
+}
+.alertText{
+  color:black;
+  font-weight: bold;
+  position: absolute;
+  left:5%;
+  top:25%;
+}
+.alert .alertClose{
+  right: 10px;
+  top: -15%;
+  font-size: 40px;
+}
+
+/* Scroll */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(59, 190, 184, 0)
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+/* --------------------------------------------------------------------------- MIXED STYLE */
+.button{
+  display:none;
+  position: absolute;
+  top:0px;
+  right:0px;
+  margin:20px;
+  padding: 5px 20px;
+  font-size: 15px;
+  float:right;
+  border-radius: 7px;
+  border:0px;
+  background: #c02641;
+  z-index: 1;
+}
+.button:hover, .button:focus{
+  background-color: white;
+  padding: 6px 21px;
+  cursor: pointer;
+}
+input[type=email], input[type=password], input[type=text], textarea{
+  margin: 15px;
+  width: 90%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, textarea:focus{
+  border: 2px solid blue;
+}
+.submit{
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.submit:hover, .submit:focus{
+  color:red;
+  cursor: pointer;
+}
+.close{
+  position: absolute;
+  right: 25px;
+  top: 0%;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+}
+.close:hover, .close:focus{
+  color: red;
+  cursor: pointer;
+}
+.top{
+  top: 0px;
+}
+.bot{
+  bottom: 0px;
+}
+/* Media */
+@media only screen and (max-width: 1140px){
+  .logo{
+    margin-top:0;
+    font-size: 125px;
+  }
+  .all{
+    margin-top: 150px;
+  }
+  .boxText{
+    font-size: 17px;
+    transform: translatey(20px);
+  }
+  .left, .center, .right, .leftleft, .rightright{
+    width:150px;
+    height:100px;
+  }
+  .box:hover{
+    width:160px;
+  }
+}
+@media only screen and (orientation: landscape) and (hover: none){
+  .left, .center, .right, .leftleft, .rightright{
+    width:15vw;
+    height:20vh;
+  }
+  .boxText{ 
+    font-size: 2vh;
+    opacity:1;
+    transform: translatey(0px);
+    color:black;
+  }
+}
+@media only screen and (max-width: 880px) and (orientation: landscape){
+  .left, .center, .right, .leftleft, .rightright{
+    width:15vw;
+    height:20vh;
+  }
+  .box{
+    background-size: calc(100% - 70px);
+
+  }
+}
+@media only screen and (max-width: 950px) and (orientation: portrait){
+  body{
+    overflow:hidden;
+  }
+  .logo{
+    font-size: 100px;
+  }
+  .button{
+    top:80%;
+  }
+  .all{
+    margin-top:0;
+  }
+  .boxText{
+    font-size: 12px;
+    opacity:1;
+    transform: translatey(0px);
+    color:black;
+  }
+  .left, .center, .right, .leftleft, .rightright{
+    width:120px;
+    height:80px;
+  }
+  .leftleft{
+    transform: translateX(169px) translateY(-110px);
+  }
+  .left{
+    transform: translateX(199px) translateY(-110px);
+  }
+  .right{
+    transform: translateX(-199px) translateY(110px);
+  }
+  .rightright{
+    transform: translateX(-169px) translateY(110px);
+  }
+  .box:hover{
+    width:130px;
+  }
+  .modalContact input[type=email], .modalContact input[type=text]{
+    width: 75%;
+  }
+}
